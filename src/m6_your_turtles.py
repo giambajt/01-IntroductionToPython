@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Joshua Giambattista.
 """
 ########################################################################
-# TODO: 1.
+# Done: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# Done: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -28,3 +28,32 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+window = rg.TurtleWindow()
+import math
+
+cynthia = rg.SimpleTurtle('turtle')
+cynthia.pen=rg.Pen('purple',1)
+cynthia.speed = 50
+cynthia.go_to(rg.Point(0, 0))
+for k in range(65):
+    cynthia.forward(30)
+    cynthia.left(150)
+    cynthia.forward(30)
+    cynthia.left(150)
+    cynthia.forward(30)
+    cynthia.go_to(rg.Point(math.cos(k), math.sin(k)))
+
+robert = rg.SimpleTurtle('triangle')
+robert.pen=rg.Pen('blue', 1)
+robert.speed = 20
+robert.pen_up()
+robert.go_to(rg.Point(-100,175))
+robert.pen_down()
+for l in range(200):
+    robert.forward(l+1)
+    robert.left(l+1)
+
+
+
+window.close_on_mouse_click()
