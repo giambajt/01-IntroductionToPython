@@ -34,7 +34,7 @@ import math
 
 cynthia = rg.SimpleTurtle('turtle')
 cynthia.pen=rg.Pen('purple',1)
-cynthia.speed = 50
+cynthia.speed= 20
 cynthia.go_to(rg.Point(0, 0))
 for k in range(65):
     cynthia.forward(30)
@@ -48,7 +48,7 @@ robert = rg.SimpleTurtle('triangle')
 robert.pen=rg.Pen('blue', 1)
 robert.speed = 20
 robert.pen_up()
-robert.go_to(rg.Point(-100,175))
+robert.go_to(rg.Point(-100,150))
 robert.pen_down()
 for l in range(200):
     robert.forward(l+1)
